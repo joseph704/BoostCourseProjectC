@@ -9,12 +9,12 @@
 import UIKit
 
 class SecondViewController: UIViewController,UITableViewDataSource {
-    var textToSet:String?
+    var textToSetCountry:String?
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(textToSet)
+        print(textToSetCountry)
         
     }
     

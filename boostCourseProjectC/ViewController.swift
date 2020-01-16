@@ -50,5 +50,13 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let nextViewController:SecondViewController = segue.destination as? SecondViewController else { return }
         
+        if segue.identifier=="showWeather" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let country:Country = countries[indexPath.row]
+                nextViewController.textToSetCountry = country.assetName
+            }
+        }
+        
+        
  }
 }
