@@ -9,40 +9,42 @@
 import UIKit
 
 class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
+    
+    
+    
     @IBOutlet weak var tableView:UITableView!
+    var countries = [Country]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let jsonDecoder:JSONDecoder = JSONDecoder()
+        guard let dataAsset :NSDataAsset = NSDataAsset(name: "countries") else { return }
+        do {
+            self.countries = try jsonDecoder.decode([Country].self, from: dataAsset.data)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return countries.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "korea", for: indexPath)
-            return cell
-        } else if indexPath.section == 1 {
-            let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "german", for: indexPath)
-            return cell
-        } else if indexPath.section == 1 {
-            let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "italy", for: indexPath)
-            return cell
-        } else if indexPath.section == 1 {
-            let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "usa", for: indexPath)
-            return cell
-        } else if indexPath.section == 1 {
-            let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "france", for: indexPath)
-            return cell
-        } else {
-            let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "japan", for: indexPath)
-            return cell
-        }
+        
+        let cell:CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
+        
+        let country:Country = countries[indexPath.row]
+        
+        let countryFlag:String = "flag_\(country.assetName)"
+        cell.countryImageView.image = UIImage(named: countryFlag)
+        cell.countryLabel.text = country.koreanName
+        
+        return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -10,12 +10,18 @@ import Foundation
 
 //      {"korean_name":"일본","asset_name":"jp"}
 
-struct Country {
-    let korean_name:String
-    let asset_name:String
+
+
+struct Country:Codable {
+    let koreanName:String
+    let assetName:String
+    
+    // Codingkey 사용시 같은 Struct or class 안에 있어야 한다.
+    enum CodingKeys: String, CodingKey{
+        
+        case assetName = "asset_name"
+        case koreanName = "korean_name"
+    }
 }
 
-enum CodingKes: String, CodingKey{
-    case koreanName = "korea_name"
-    case assetName = "asset_name"
-}
+
