@@ -46,31 +46,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier=="korea" {
-            guard let nextViewController:SecondViewController = segue.destination as? SecondViewController else {
-                       return
-                   }
-                   
-                   guard let cell:UITableViewCell = sender as? UITableViewCell else{
-                       return
-                   }
-                   
-                   // SecondViewController의 textlabel property는 아직 메모리에 올라와 있지 않기때문에 에러발생!
-                   // nextViewController.textLabel.text = cell.textLabel?.text
-                   
-                   nextViewController.textToSet = "korea"
-                   
-               
-        } else if segue.identifier=="german" {
-            print("asdf")
-        } else if segue.identifier=="italy" {
-            
-        } else if segue.identifier=="usa" {
-            
-        } else if segue.identifier=="france" {
-            
-        } else if segue.identifier=="japan" {
-            
-        }
+        guard let nextViewController:SecondViewController = segue.destination as? SecondViewController else { return }
+        
  }
 }
