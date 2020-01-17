@@ -70,14 +70,23 @@ class SecondViewController: UIViewController,UITableViewDataSource,UITableViewDe
   
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let nextViewcontroller:DetailViewController = segue.destination as? DetailViewController else { return }
+        if segue.identifier=="showDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let weather:Weather = weathers[indexPath.row]
+                nextViewcontroller.textToSetCityName = weather.cityName
+                nextViewcontroller.textToSetTemperature = weather.celsius
+                nextViewcontroller.textToSetRainFallProbability = weather.rainfallProbability
+                nextViewcontroller.textToSetState = weather.state
+            }
+        }
+        
     }
-    */
+    
 
 }
