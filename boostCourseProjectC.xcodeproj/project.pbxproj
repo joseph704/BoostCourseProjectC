@@ -18,6 +18,7 @@
 		23F2540823D06BF000C86825 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F2540723D06BF000C86825 /* CustomTableViewCell.swift */; };
 		23F2540A23D07CE300C86825 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F2540923D07CE300C86825 /* Weather.swift */; };
 		23F2540C23D0819A00C86825 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F2540B23D0819A00C86825 /* WeatherTableViewCell.swift */; };
+		23F5029523D17F4100B0ED31 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F5029423D17F4100B0ED31 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		23F2540723D06BF000C86825 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		23F2540923D07CE300C86825 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		23F2540B23D0819A00C86825 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		23F5029423D17F4100B0ED31 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				23F2540B23D0819A00C86825 /* WeatherTableViewCell.swift */,
 				23E696CD23CF0EFB0012FC1C /* SecondViewController.swift */,
 				23F2540923D07CE300C86825 /* Weather.swift */,
+				23F5029423D17F4100B0ED31 /* DetailViewController.swift */,
 				23F2540723D06BF000C86825 /* CustomTableViewCell.swift */,
 				23E696BF23CF01E70012FC1C /* Main.storyboard */,
 				23E696C223CF01E80012FC1C /* Assets.xcassets */,
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F5029523D17F4100B0ED31 /* DetailViewController.swift in Sources */,
 				23F2540C23D0819A00C86825 /* WeatherTableViewCell.swift in Sources */,
 				23F2540823D06BF000C86825 /* CustomTableViewCell.swift in Sources */,
 				23E696CE23CF0EFB0012FC1C /* SecondViewController.swift in Sources */,

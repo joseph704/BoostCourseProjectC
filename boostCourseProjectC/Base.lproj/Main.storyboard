@@ -146,6 +146,7 @@
                                             <outlet property="rainFallProbability" destination="L3K-yL-7nr" id="mf5-JL-3Cv"/>
                                             <outlet property="temperature" destination="qDz-bb-c2U" id="DZz-0T-WPj"/>
                                             <outlet property="weatherImageView" destination="bya-Fh-R84" id="lEa-Cu-8W2"/>
+                                            <segue destination="uNn-ha-W5f" kind="show" identifier="showDetail" id="yqC-2A-RMf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -166,6 +167,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWa-KG-sZU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1756" y="122.78860569715144"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Bnx-gm-JG8">
+            <objects>
+                <viewController id="uNn-ha-W5f" customClass="DetailViewController" customModule="boostCourseProjectC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ePO-wr-39X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PlG-Vo-Ov7">
+                                <rect key="frame" x="105" y="91" width="165" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="16R-c4-Abo"/>
+                                    <constraint firstAttribute="height" constant="160" id="YTm-Bk-BoO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="섭씨 000.0도 / 화씨 000.00도" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QqJ-Jj-ggg">
+                                <rect key="frame" x="75" y="323" width="224" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="60G-tH-GM2"/>
+                                    <constraint firstAttribute="width" constant="224" id="H0t-eJ-n9O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강수확률: 000.00%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sh-7f-A1m">
+                                <rect key="frame" x="119" y="352" width="137" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="BOZ-x2-6aD"/>
+                                    <constraint firstAttribute="width" constant="137" id="utk-XZ-Ggs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상태" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03W-od-lzC">
+                                <rect key="frame" x="172" y="294" width="30" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2ZH-4y-Anj"/>
+                                    <constraint firstAttribute="width" constant="30" id="GW5-cK-nCv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="03W-od-lzC" firstAttribute="leading" secondItem="DF0-Py-Jq8" secondAttribute="leading" constant="172" id="3yj-q5-7g1"/>
+                            <constraint firstItem="QqJ-Jj-ggg" firstAttribute="top" secondItem="03W-od-lzC" secondAttribute="bottom" constant="8" id="65o-Ig-thJ"/>
+                            <constraint firstItem="DF0-Py-Jq8" firstAttribute="trailing" secondItem="QqJ-Jj-ggg" secondAttribute="trailing" constant="76" id="83b-HJ-Imy"/>
+                            <constraint firstItem="PlG-Vo-Ov7" firstAttribute="top" secondItem="DF0-Py-Jq8" secondAttribute="top" constant="47" id="BOr-eb-Z5F"/>
+                            <constraint firstItem="03W-od-lzC" firstAttribute="top" secondItem="PlG-Vo-Ov7" secondAttribute="bottom" constant="43" id="PR4-RR-oJi"/>
+                            <constraint firstItem="3sh-7f-A1m" firstAttribute="leading" secondItem="DF0-Py-Jq8" secondAttribute="leading" constant="119" id="cHK-IX-08h"/>
+                            <constraint firstItem="DF0-Py-Jq8" firstAttribute="trailing" secondItem="03W-od-lzC" secondAttribute="trailing" constant="173" id="eRq-wn-a9l"/>
+                            <constraint firstItem="DF0-Py-Jq8" firstAttribute="trailing" secondItem="3sh-7f-A1m" secondAttribute="trailing" constant="119" id="eTs-3r-1X7"/>
+                            <constraint firstItem="PlG-Vo-Ov7" firstAttribute="leading" secondItem="DF0-Py-Jq8" secondAttribute="leading" constant="105" id="iMQ-uZ-EJr"/>
+                            <constraint firstItem="3sh-7f-A1m" firstAttribute="top" secondItem="QqJ-Jj-ggg" secondAttribute="bottom" constant="8" id="jAL-BW-CpI"/>
+                            <constraint firstItem="QqJ-Jj-ggg" firstAttribute="leading" secondItem="DF0-Py-Jq8" secondAttribute="leading" constant="75" id="qVd-ha-oWL"/>
+                            <constraint firstItem="DF0-Py-Jq8" firstAttribute="trailing" secondItem="PlG-Vo-Ov7" secondAttribute="trailing" constant="105" id="sbc-wv-Zpd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DF0-Py-Jq8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nwc-hE-PVr"/>
+                    <connections>
+                        <outlet property="rainFallProbability" destination="3sh-7f-A1m" id="Jj6-gh-JNG"/>
+                        <outlet property="state" destination="03W-od-lzC" id="L1g-lA-PjF"/>
+                        <outlet property="temperature" destination="QqJ-Jj-ggg" id="xwT-4A-k5V"/>
+                        <outlet property="weatherImageView" destination="PlG-Vo-Ov7" id="wG0-29-jbT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C7i-pj-duP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2413.5999999999999" y="122.78860569715144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="54j-Vh-Twz">
