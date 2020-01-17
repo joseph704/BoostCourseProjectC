@@ -25,6 +25,8 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         } catch {
             print(error.localizedDescription)
         }
+        
+        tableView.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

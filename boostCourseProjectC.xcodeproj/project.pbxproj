@@ -17,6 +17,7 @@
 		23F2540623D065AC00C86825 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F2540523D065AC00C86825 /* Country.swift */; };
 		23F2540823D06BF000C86825 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F2540723D06BF000C86825 /* CustomTableViewCell.swift */; };
 		23F2540A23D07CE300C86825 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F2540923D07CE300C86825 /* Weather.swift */; };
+		23F2540C23D0819A00C86825 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F2540B23D0819A00C86825 /* WeatherTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		23F2540523D065AC00C86825 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		23F2540723D06BF000C86825 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		23F2540923D07CE300C86825 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		23F2540B23D0819A00C86825 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				23E696B923CF01E70012FC1C /* AppDelegate.swift */,
 				23E696BB23CF01E70012FC1C /* SceneDelegate.swift */,
 				23E696BD23CF01E70012FC1C /* ViewController.swift */,
+				23F2540B23D0819A00C86825 /* WeatherTableViewCell.swift */,
 				23E696CD23CF0EFB0012FC1C /* SecondViewController.swift */,
 				23F2540923D07CE300C86825 /* Weather.swift */,
 				23F2540723D06BF000C86825 /* CustomTableViewCell.swift */,
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F2540C23D0819A00C86825 /* WeatherTableViewCell.swift in Sources */,
 				23F2540823D06BF000C86825 /* CustomTableViewCell.swift in Sources */,
 				23E696CE23CF0EFB0012FC1C /* SecondViewController.swift in Sources */,
 				23E696BE23CF01E70012FC1C /* ViewController.swift in Sources */,

@@ -7,3 +7,23 @@
 //
 
 import Foundation
+/* {
+   "city_name":"함부르크",
+   "state":12,
+   "celsius":5.6,
+   "rainfall_probability":40
+} */
+
+struct Weather:Codable {
+    let cityName:String
+    let state:Int
+    let celsius:Double
+    let rainfallProbability:Int
+    
+    private enum CodingKeys: String, CodingKey{
+        case cityName = "city_name"
+        case state
+        case celsius
+        case rainfallProbability = "rainfall_probability"
+    }
+}
